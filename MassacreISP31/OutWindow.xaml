@@ -1,0 +1,18 @@
+﻿<Window x:Class="MassacreISP31.OutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MassacreISP31"
+        mc:Ignorable="d"
+        Title="Да" Height="594" Width="335" ResizeMode="NoResize">
+    <Grid>
+        <StackPanel>
+            <Label HorizontalContentAlignment="Center" Content="" x:Name="lbVictimName" Height="40"></Label>
+            <Label HorizontalContentAlignment="Center" Content="" x:Name="lbVictimHP" Height="40"></Label>
+            <Label HorizontalContentAlignment="Center" x:Name="lbWeapon" Height="40"></Label>
+            <Image Stretch="Fill" Height="400" x:Name="meWeaponImage"></Image>
+            <Button Content="Ок" Height="40" Click="Button_Click"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

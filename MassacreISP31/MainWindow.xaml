@@ -5,20 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MassacreISP31"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="CanMinimize">
+        Title="Резня ИСП-31" Height="450" Width="800" MinHeight="450" MinWidth="450" ResizeMode="CanMinimize">
     <Window.Background>
         <ImageBrush ImageSource="/1232345.jpg"/>
     </Window.Background>
     <Grid>
-        <ListBox x:Name="victimList" HorizontalAlignment="Center"  Height="307" VerticalAlignment="Center" Width="230" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Справка" Click="Info"></MenuItem>
+            <MenuItem Header="Выход" Click="Exit"></MenuItem>
+        </Menu>
+        <ListBox SelectionChanged="Victim_Output" x:Name="victimList" HorizontalAlignment="Center"  Height="307" VerticalAlignment="Center" Width="230" >
             <ListBox.Background>
                 <ImageBrush ImageSource="/52345634.jpg"/>
             </ListBox.Background>
-            <ListBoxItem Content="Шестаков" Background="AntiqueWhite" BorderThickness="2"></ListBoxItem>
-            <ListBoxItem Content="Cеливанов" Background="AntiqueWhite"></ListBoxItem>
-            <ListBoxItem Content="Обухов"></ListBoxItem>
-            <ListBoxItem Content="Назаров"></ListBoxItem>
-            <ListBoxItem Content="Косоуров"></ListBoxItem>
+            <ListBoxItem x:Name="li1" Content="Шестаков" BorderBrush="Black" Background="White" BorderThickness="2"></ListBoxItem>
+            <ListBoxItem x:Name="li2" Content="Cеливанов" BorderBrush="Black" Background="White" BorderThickness="2"></ListBoxItem>
+            <ListBoxItem x:Name="li3" Content="Обухов" Background="White" BorderBrush="Black" BorderThickness="2"></ListBoxItem>
+            <ListBoxItem x:Name="li4" Content="Назаров" Background="White" BorderBrush="Black" BorderThickness="2"></ListBoxItem>
+            <ListBoxItem x:Name="li5" Content="Косоуров" Background="White" BorderBrush="Black" BorderThickness="2"></ListBoxItem>
         </ListBox>
 
     </Grid>
